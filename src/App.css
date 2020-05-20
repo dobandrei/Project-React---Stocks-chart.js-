@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+:root {
+  --succes-color:#2ecc71;
+  --error-color:#e74c3c;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.stocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#stockSymbolInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#stockSymbolInput input {
+  height: 5px;
+  border-radius: 10px;
+  border: 5px solid white;
+  padding: 15px 0;
+  font-size: 16px;
+  width: 160px;
+}
+
+#stockSymbolInput input::placeholder {
+  color: grey;
+  opacity: 0.5;
+}
+
+#stockSymbolInput.success input{
+  border-color: var(--succes-color);
+}
+
+#stockSymbolInput.error input{
+  border-color: var(--error-color);
+}
+
+.inputHistorySize {
+  border:1px solid white;
+  padding: 3px 10px;
+}
+
+.inputInterval {
+  display: flex;
+  flex-direction:column;
+  border:1px solid white;
+  align-items: start;
+  width: 150px;
+  margin-bottom: 20px; 
+  padding: 3px 4px 3px 10px;
+}
+
+.inputIntervalPoints{
+  display: flex;
+  flex-direction:column;
+  border-top:1px solid white;
+}
+
+p {
+  font-size: 12px;
+  color: var(--error-color);
+  margin-bottom: 20px;
+}
+
+#button {
+position: relative;
+display: inline-block;
+text-transform: uppercase;
+letter-spacing: 3px;
+text-decoration: none;
+font-size: 24px;
+overflow: hidden;
+transition: 0.2s;
+background-color: black;
+color: white;
+padding: 15px 25px;
+font-family: 'Poppins', sans-serif;
+}
+
+#button:hover{
+color: rgb(22, 99, 54);
+background: rgb(190, 243, 212);
+box-shadow: 0 0 10px rgb(190, 243, 212), 0 0 30px rgb(190, 243, 212), 0 0 60px rgb(190, 243, 212);
+transition-delay: 1s;
+cursor: pointer;
+}
+
+#button span{
+  position: absolute;
+  display: block;
+  }
+
+#button span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgb(190, 243, 212))
+}
+#button:hover span:nth-child(1){
+  left: 100%;
+  transition: 1s;
+}
+#button span:nth-child(3){
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, rgb(190, 243, 212))
+}
+#button:hover span:nth-child(3){
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+#button span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, rgb(190, 243, 212))
+}
+#button:hover span:nth-child(2){
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+#button span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, rgb(190, 243, 212))
+}
+#button:hover span:nth-child(4){
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
